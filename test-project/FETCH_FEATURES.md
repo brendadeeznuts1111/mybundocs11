@@ -15,8 +15,8 @@ A comprehensive reference table for all Bun Fetch API features from [bun.com/doc
 - [Environment & Limits](#environment--limits)
 - [Related Networking APIs](#related-networking-apis)
 - [TypeScript Definitions](#typescript-definitions)
-- [Code Examples](#code-examples)
 - [Quick Usage Examples](#quick-usage-examples)
+- [Code Examples](#code-examples)
 - [Performance Reference Tables](#performance-reference-tables)
 - [Common Errors & Troubleshooting](#common-errors--troubleshooting)
 - [Node.js Comparison](#nodejs-comparison)
@@ -28,66 +28,66 @@ A comprehensive reference table for all Bun Fetch API features from [bun.com/doc
 
 ### Response Methods
 
-| # | Status | Priority | Feature | Bun API Signature | Returns | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Returns | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
-| <a id="f1">1</a> | `✅ STABLE` | `🔴 CRITICAL` | **Response.text()** | `response.text(): Promise<string>` | `string` | [#2](#f2), [#3](#f3) | [ex-001](#ex-001) | [docs](https://bun.com/docs/runtime/networking/fetch#response-text) |
-| <a id="f2">2</a> | `✅ STABLE` | `🔴 CRITICAL` | **Response.json()** | `response.json(): Promise<any>` | `any` | [#1](#f1), [#3](#f3) | [ex-001](#ex-001) | [docs](https://bun.com/docs/runtime/networking/fetch#response-json) |
-| <a id="f3">3</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.formData()** | `response.formData(): Promise<FormData>` | `FormData` | [#1](#f1), [#2](#f2) | [ex-002](#ex-002) | [docs](https://bun.com/docs/runtime/networking/fetch#response-formdata) |
-| <a id="f4">4</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Response.bytes()** | `response.bytes(): Promise<Uint8Array>` | `Uint8Array` | [#5](#f5), [#6](#f6) | [ex-004](#ex-004) | [docs](https://bun.com/docs/runtime/networking/fetch#response-bytes) |
-| <a id="f5">5</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.arrayBuffer()** | `response.arrayBuffer(): Promise<ArrayBuffer>` | `ArrayBuffer` | [#4](#f4), [#6](#f6) | [ex-003](#ex-003) | [docs](https://bun.com/docs/runtime/networking/fetch#response-arraybuffer) |
-| <a id="f6">6</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.blob()** | `response.blob(): Promise<Blob>` | `Blob` | [#4](#f4), [#5](#f5) | [ex-003](#ex-003) | [docs](https://bun.com/docs/runtime/networking/fetch#response-blob) |
+| <a id="f1">1</a> | `✅ STABLE` | `🔴 CRITICAL` | **Response.text()** | `response.text(): Promise<string>` | `string` | [#2](#f2), [#3](#f3) | [ex-001](#ex-001) • [intro](#example-001) | [docs](https://bun.com/docs/runtime/networking/fetch#response-text) |
+| <a id="f2">2</a> | `✅ STABLE` | `🔴 CRITICAL` | **Response.json()** | `response.json(): Promise<any>` | `any` | [#1](#f1), [#3](#f3) | [ex-001](#ex-001) • [intro](#example-001) | [docs](https://bun.com/docs/runtime/networking/fetch#response-json) |
+| <a id="f3">3</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.formData()** | `response.formData(): Promise<FormData>` | `FormData` | [#1](#f1), [#2](#f2) | [ex-002](#ex-002) • [intro](#example-002) | [docs](https://bun.com/docs/runtime/networking/fetch#response-formdata) |
+| <a id="f4">4</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Response.bytes()** | `response.bytes(): Promise<Uint8Array>` | `Uint8Array` | [#5](#f5), [#6](#f6) | [ex-004](#ex-004) • [intro](#example-003) | [docs](https://bun.com/docs/runtime/networking/fetch#response-bytes) |
+| <a id="f5">5</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.arrayBuffer()** | `response.arrayBuffer(): Promise<ArrayBuffer>` | `ArrayBuffer` | [#4](#f4), [#6](#f6) | [ex-003](#ex-003) • [intro](#example-003) | [docs](https://bun.com/docs/runtime/networking/fetch#response-arraybuffer) |
+| <a id="f6">6</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Response.blob()** | `response.blob(): Promise<Blob>` | `Blob` | [#4](#f4), [#5](#f5) | [ex-003](#ex-003) • [intro](#example-003) | [docs](https://bun.com/docs/runtime/networking/fetch#response-blob) |
 
 ### File Operations
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|
-| <a id="f7">7</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Bun.write()** | `Bun.write(path: string \| number \| Blob, data: Blob \| Response): Promise<number>` | [#8](#f8), [#23](#f23) | [ex-004](#ex-004) | [docs](https://bun.com/docs/api/file-io#bun-write) |
+| <a id="f7">7</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Bun.write()** | `Bun.write(path: string \| number \| Blob, data: Blob \| Response): Promise<number>` | [#8](#f8), [#23](#f23) | [ex-004](#ex-004) • [intro](#example-004) | [docs](https://bun.com/docs/api/file-io#bun-write) |
 | <a id="f8">8</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Sendfile Optimization** | `Automatic (no API)` | [#7](#f7), [#37](#f37) | [ex-004](#ex-004) | [docs](https://bun.com/docs/runtime/networking/fetch#sendfile-optimization) |
 
 ### Connection Management
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|
-| <a id="f9">9</a> | `✅ STABLE` | `🟡 IMPORTANT` | **DNS Prefetch** | `dns.prefetch(hostname: string): void` | [#10](#f10), [#35](#f35) | [ex-005](#ex-005) | [docs](https://bun.com/docs/api/dns#dns-prefetch) |
-| <a id="f10">10</a> | `✅ STABLE` | `🟡 IMPORTANT` | **DNS Cache Stats** | `dns.getCacheStats(): DNSCacheStats` | [#9](#f9), [#35](#f35) | [ex-005](#ex-005) | [docs](https://bun.com/docs/api/dns#dns-getcachestats) |
-| <a id="f11">11</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Preconnect** | `fetch.preconnect(url: string): void` | [#12](#f12), [#13](#f13) | [ex-006](#ex-006) | [docs](https://bun.com/docs/runtime/networking/fetch#preconnect) |
-| <a id="f12">12</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Startup Preconnect** | `--fetch-preconnect <url>` (CLI) | [#11](#f11), [#13](#f13) | [ex-006](#ex-006) | [docs](https://bun.com/docs/runtime/networking/fetch#startup-preconnect) |
-| <a id="f13">13</a> | `✅ STABLE` | `🔴 CRITICAL` | **Keep-Alive** | `fetch(url, { keepalive: boolean })` | [#11](#f11), [#12](#f12) | [ex-007](#ex-007) | [docs](https://bun.com/docs/runtime/networking/fetch#keep-alive) |
+| <a id="f9">9</a> | `✅ STABLE` | `🟡 IMPORTANT` | **DNS Prefetch** | `dns.prefetch(hostname: string): void` | [#10](#f10), [#35](#f35) | [ex-005](#ex-005) • [intro](#example-005) | [docs](https://bun.com/docs/api/dns#dns-prefetch) |
+| <a id="f10">10</a> | `✅ STABLE` | `🟡 IMPORTANT` | **DNS Cache Stats** | `dns.getCacheStats(): DNSCacheStats` | [#9](#f9), [#35](#f35) | [ex-005](#ex-005) • [intro](#example-005) | [docs](https://bun.com/docs/api/dns#dns-getcachestats) |
+| <a id="f11">11</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Preconnect** | `fetch.preconnect(url: string): void` | [#12](#f12), [#13](#f13) | [ex-006](#ex-006) • [intro](#example-006) | [docs](https://bun.com/docs/runtime/networking/fetch#preconnect) |
+| <a id="f12">12</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Startup Preconnect** | `--fetch-preconnect <url>` (CLI) | [#11](#f11), [#13](#f13) | [ex-006](#ex-006) • [intro](#example-006) | [docs](https://bun.com/docs/runtime/networking/fetch#startup-preconnect) |
+| <a id="f13">13</a> | `✅ STABLE` | `🔴 CRITICAL` | **Keep-Alive** | `fetch(url, { keepalive: boolean })` | [#11](#f11), [#12](#f12) | [ex-007](#ex-007) • [intro](#example-007) | [docs](https://bun.com/docs/runtime/networking/fetch#keep-alive) |
 | <a id="f14">14</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Connection Limit** | `BUN_CONFIG_MAX_HTTP_REQUESTS=number` (Env) | [#13](#f13), [#36](#f36) | [ex-007](#ex-007) | [docs](https://bun.com/docs/runtime/networking/fetch#connection-limits) |
 
 ### Request Control
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
-| <a id="f15">15</a> | `✅ STABLE` | `🔴 CRITICAL` | **AbortSignal Timeout** | `AbortSignal.timeout(ms: number): AbortSignal` | [#16](#f16), [#38](#f38) | [ex-008](#ex-008) | [docs](https://bun.com/docs/runtime/networking/fetch#abortsignal-timeout) |
-| <a id="f16">16</a> | `✅ STABLE` | `🔴 CRITICAL` | **AbortController** | `new AbortController(): AbortController` | [#15](#f15), [#38](#f38) | [ex-008](#ex-008) | [docs](https://bun.com/docs/runtime/networking/fetch#abortcontroller) |
-| <a id="f17">17</a> | `✅ STABLE` | `🔴 CRITICAL` | **Custom Headers** | `fetch(url, { headers: HeadersInit })` | [#18](#f18), [#20](#f20) | [ex-009](#ex-009) | [docs](https://bun.com/docs/runtime/networking/fetch#custom-headers) |
+| <a id="f15">15</a> | `✅ STABLE` | `🔴 CRITICAL` | **AbortSignal Timeout** | `AbortSignal.timeout(ms: number): AbortSignal` | [#16](#f16), [#38](#f38) | [ex-008](#ex-008) • [intro](#example-008) | [docs](https://bun.com/docs/runtime/networking/fetch#abortsignal-timeout) |
+| <a id="f16">16</a> | `✅ STABLE` | `🔴 CRITICAL` | **AbortController** | `new AbortController(): AbortController` | [#15](#f15), [#38](#f38) | [ex-008](#ex-008) • [intro](#example-008) | [docs](https://bun.com/docs/runtime/networking/fetch#abortcontroller) |
+| <a id="f17">17</a> | `✅ STABLE` | `🔴 CRITICAL` | **Custom Headers** | `fetch(url, { headers: HeadersInit })` | [#18](#f18), [#20](#f20) | [ex-009](#ex-009) • [intro](#example-009) | [docs](https://bun.com/docs/runtime/networking/fetch#custom-headers) |
 | <a id="f18">18</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Verbose Logging** | `fetch(url, { verbose: boolean \| "curl" })` | [#17](#f17) | [ex-010](#ex-010) | [docs](https://bun.com/docs/runtime/networking/fetch#verbose-logging) |
 
 ### POST Methods
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
-| <a id="f19">19</a> | `✅ STABLE` | `🟡 IMPORTANT` | **POST String** | `fetch(url, { method: "POST", body: string })` | [#17](#f17), [#20](#f20) | [ex-011](#ex-011) | [docs](https://bun.com/docs/runtime/networking/fetch#post-string) |
-| <a id="f20">20</a> | `✅ STABLE` | `🔴 CRITICAL` | **POST JSON** | `fetch(url, { method: "POST", body: object })` | [#17](#f17), [#19](#f19) | [ex-011](#ex-011) | [docs](https://bun.com/docs/runtime/networking/fetch#post-json) |
-| <a id="f21">21</a> | `✅ STABLE` | `🟡 IMPORTANT` | **POST FormData** | `fetch(url, { method: "POST", body: FormData })` | [#17](#f17), [#19](#f19) | [ex-012](#ex-012) | [docs](https://bun.com/docs/runtime/networking/fetch#post-formdata) |
+| <a id="f19">19</a> | `✅ STABLE` | `🟡 IMPORTANT` | **POST String** | `fetch(url, { method: "POST", body: string })` | [#17](#f17), [#20](#f20) | [ex-011](#ex-011) • [intro](#example-011) | [docs](https://bun.com/docs/runtime/networking/fetch#post-string) |
+| <a id="f20">20</a> | `✅ STABLE` | `🔴 CRITICAL` | **POST JSON** | `fetch(url, { method: "POST", body: object })` | [#17](#f17), [#19](#f19) | [ex-011](#ex-011) • [intro](#example-011) | [docs](https://bun.com/docs/runtime/networking/fetch#post-json) |
+| <a id="f21">21</a> | `✅ STABLE` | `🟡 IMPORTANT` | **POST FormData** | `fetch(url, { method: "POST", body: FormData })` | [#17](#f17), [#19](#f19) | [ex-012](#ex-012) • [intro](#example-012) | [docs](https://bun.com/docs/runtime/networking/fetch#post-formdata) |
 | <a id="f22">22</a> | `✅ STABLE` | `🟡 IMPORTANT` | **POST ArrayBuffer** | `fetch(url, { method: "POST", body: ArrayBuffer })` | [#17](#f17), [#19](#f19) | [ex-013](#ex-013) | [docs](https://bun.com/docs/runtime/networking/fetch#post-arraybuffer) |
 | <a id="f23">23</a> | `✅ STABLE` | `🟢 OPTIMIZATION` | **Streaming Request** | `fetch(url, { body: ReadableStream })` | [#7](#f7), [#8](#f8) | [ex-014](#ex-014) | [docs](https://bun.com/docs/runtime/networking/fetch#streaming-request) |
 
 ### Advanced Options
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
-| <a id="f24">24</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Proxy (Simple)** | `fetch(url, { proxy: string })` | [#25](#f25) | [ex-015](#ex-015) | [docs](https://bun.com/docs/runtime/networking/fetch#proxy-simple) |
-| <a id="f25">25</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Proxy (Advanced)** | `fetch(url, { proxy: object })` | [#24](#f24) | [ex-015](#ex-015) | [docs](https://bun.com/docs/runtime/networking/fetch#proxy-advanced) |
-| <a id="f26">26</a> | `✅ STABLE` | `🟡 IMPORTANT` | **TLS Client Cert** | `fetch(url, { tls: object })` | [#27](#f27) | [ex-016](#ex-016) | [docs](https://bun.com/docs/runtime/networking/fetch#tls-client-cert) |
+| <a id="f24">24</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Proxy (Simple)** | `fetch(url, { proxy: string })` | [#25](#f25) | [ex-015](#ex-015) • [intro](#example-015) | [docs](https://bun.com/docs/runtime/networking/fetch#proxy-simple) |
+| <a id="f25">25</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Proxy (Advanced)** | `fetch(url, { proxy: object })` | [#24](#f24) | [ex-015](#ex-015) • [intro](#example-015) | [docs](https://bun.com/docs/runtime/networking/fetch#proxy-advanced) |
+| <a id="f26">26</a> | `✅ STABLE` | `🟡 IMPORTANT` | **TLS Client Cert** | `fetch(url, { tls: object })` | [#27](#f27) | [ex-016](#ex-016) • [intro](#example-016) | [docs](https://bun.com/docs/runtime/networking/fetch#tls-client-cert) |
 | <a id="f27">27</a> | `✅ STABLE` | `🟡 IMPORTANT` | **TLS Custom Validation** | `fetch(url, { tls: object })` | [#26](#f26) | [ex-016](#ex-016) | [docs](https://bun.com/docs/runtime/networking/fetch#tls-custom-validation) |
 | <a id="f28">28</a> | `✅ STABLE` | `🟡 IMPORTANT` | **TLS Disable Validation** | `fetch(url, { tls: object })` | [#26](#f26) | [ex-016](#ex-016) | [docs](https://bun.com/docs/runtime/networking/fetch#tls-disable-validation) |
 | <a id="f29">29</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Decompression Control** | `fetch(url, { decompress: boolean })` | [#24](#f24) | [ex-017](#ex-017) | [docs](https://bun.com/docs/runtime/networking/fetch#decompression-control) |
 
 ### URL Protocols
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
 | <a id="f30">30</a> | `✅ STABLE` | `🟡 IMPORTANT` | **File URL** | `fetch("file:///path")` | [#7](#f7) | [ex-018](#ex-018) | [docs](https://bun.com/docs/runtime/networking/fetch#file-url) |
 | <a id="f31">31</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Data URL** | `fetch("data:...")` | [#32](#f32) | [ex-019](#ex-019) | [docs](https://bun.com/docs/runtime/networking/fetch#data-url) |
@@ -97,7 +97,7 @@ A comprehensive reference table for all Bun Fetch API features from [bun.com/doc
 
 ### Environment & Limits
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
 | <a id="f35">35</a> | `✅ STABLE` | `🟡 IMPORTANT` | **DNS Cache TTL** | `30 seconds (default)` | [#9](#f9) | [ex-005](#ex-005) | [docs](https://bun.com/docs/api/dns#dns-cache-ttl) |
 | <a id="f36">36</a> | `✅ STABLE` | `🟡 IMPORTANT` | **Connection Limit** | `BUN_CONFIG_MAX_HTTP_REQUESTS` | [#14](#f14) | [ex-007](#ex-007) | [docs](https://bun.com/docs/runtime/networking/fetch#connection-limits) |
@@ -106,7 +106,7 @@ A comprehensive reference table for all Bun Fetch API features from [bun.com/doc
 
 ### Related Networking APIs
 
-| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Example | Documentation |
+| # | Status | Priority | Feature | Bun API Signature | Cross-Ref | Examples | Documentation |
 |---|---|---|---|---|---|---|---|---|
 | <a id="f39">39</a> | `✅ STABLE` | `🔴 CRITICAL` | **Bun.serve()** | `Bun.serve({ fetch(req) })` | [#20](#f20) | [ex-023](#ex-023) | [docs](https://bun.com/docs/api/http#bun-serve) |
 | <a id="f40">40</a> | `✅ STABLE` | `🟡 IMPORTANT` | **HTMLRewriter** | `new HTMLRewriter().transform(res)` | [#1](#f1) | [ex-024](#ex-024) | [docs](https://bun.com/docs/api/html-rewriter) |
@@ -225,6 +225,9 @@ A comprehensive reference table for all Bun Fetch API features from [bun.com/doc
 ---
 
 ## Quick Usage Examples
+
+> **Quick Start Examples** - Introductory code samples for common use cases.  
+> For detailed, production-ready examples, see → **[Code Examples](#code-examples)**
 
 ### <a id="example-001"></a>1. Basic Response Methods (Critical)
 ```typescript
@@ -507,9 +510,14 @@ const socket = await Bun.connect({
 const ip = await Bun.dns.lookup("google.com");
 ```
 
+**[← Back to Table of Contents](#table-of-contents)**
+
 ---
 
 ## Code Examples
+
+> **Detailed Code Examples** - Comprehensive, production-ready implementations.  
+> For quick start examples, see ← **[Quick Usage Examples](#quick-usage-examples)**
 
 ### <a id="ex-001"></a>1. Response.text() - Get Text Response
 
@@ -954,6 +962,8 @@ const socket = await Bun.connect({
 const ip = await Bun.dns.lookup("google.com");
 console.log(ip); // "142.250.191.14" (or current IP)
 ```
+
+**[← Back to Table of Contents](#table-of-contents)**
 
 ---
 
