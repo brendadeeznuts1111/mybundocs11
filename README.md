@@ -20,12 +20,12 @@ This repository includes various Bun (JavaScript runtime) related materials orga
 | [bun-docs-repo/](bun-docs-repo/README.md) | The main Bun documentation and source repository, including guides, API docs, benchmarks, and build scripts. |
 | [comprehensive-api-test/](comprehensive-api-test/README.md) | A comprehensive API testing project demonstrating Bun's server capabilities. |
 | [enhanced-api-test/](enhanced-api-test/README.md) | Enhanced API testing with file upload functionality. |
-| [test-project/](test-project/README.md) | Collection of test projects showcasing different Bun features like HTTP servers, fetch API, and bundling. |
-| [your-project/](your-project/README.md) | A basic Bun project template. |
+| [enhanced-project/](enhanced-project/README.md) | Enhanced project setup. |
 | [final-test-project/](final-test-project/README.md) | Final test implementation. |
 | [full-api-project/](full-api-project/README.md) | Full-featured API project. |
 | [test-port-project/](test-port-project/README.md) | Port testing utilities. |
-| [enhanced-project/](enhanced-project/README.md) | Enhanced project setup. |
+| [test-project/](test-project/README.md) | Collection of test projects showcasing different Bun features like HTTP servers, fetch API, and bundling. |
+| [your-project-name/](your-project-name/README.md) | A basic Bun project template. |
 
 ## Getting Started
 
@@ -38,7 +38,7 @@ This repository includes various Bun (JavaScript runtime) related materials orga
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/brendadeeznuts1111/mybundocs11.git
+   git clone https://github.com/yourusername/mybundocs11.git
    cd mybundocs11
    ```
 
