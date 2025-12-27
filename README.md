@@ -2,6 +2,9 @@
 
 [![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)](https://bun.sh/)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Projects](https://img.shields.io/badge/projects-9-4CAF50.svg)
+![Examples](https://img.shields.io/badge/examples-40+-FF9800.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
 
 A comprehensive collection of Bun-related documentation, test projects, and examples. This repository serves as a learning resource and reference implementation for Bun's capabilities as a fast JavaScript runtime, bundler, test runner, and package manager all in one.
 
@@ -27,26 +30,46 @@ curl -fsSL https://bun.sh/install | bash
 
 This repository includes comprehensive Bun (JavaScript runtime) materials organized into the following directories:
 
+### 📈 Repository Stats
+- **9 Projects**: Complete Bun learning ecosystem
+- **40+ Examples**: Production-ready code samples
+- **1000+ Lines**: Comprehensive documentation
+- **6 Server Configs**: From basic to enterprise-grade
+- **Full Test Coverage**: End-to-end testing examples
+
+### 🛠️ Technologies Covered
+- **Runtime**: Bun.serve(), WebSockets, File I/O, SQLite
+- **Networking**: Fetch API, HTTP servers, TCP connections
+- **Security**: JWT authentication, TLS/SSL, CORS
+- **Database**: SQLite integration, connection pooling
+- **Testing**: Bun test runner, performance benchmarks
+- **Build Tools**: Bundling, transpilation, hot reloading
+
+### 📋 Legend
+- **Status**: ✅ Complete = Production-ready, 🟡 In Progress = Work in progress
+- **Difficulty**: 🟢 Beginner, 🟡 Intermediate, 🟠 Advanced, 🔴 Expert
+- **Time**: Estimated time to explore and understand each project
+
 ### 📚 Documentation & Reference
-| Directory | Description |
-|-----------|-------------|
-| [`bun-docs-repo/`](bun-docs-repo/README.md) | **Official Bun Source Repository** - Complete documentation ([docs/](bun-docs-repo/docs/)), API docs, benchmarks, build scripts, and source code ([src/](bun-docs-repo/src/)) |
+| Directory | Status | Difficulty | Key Files | Description |
+|-----------|--------|------------|-----------|-------------|
+| [`bun-docs-repo/`](bun-docs-repo/README.md) | ✅ **Complete** | 📚 Reference | [`docs/`](bun-docs-repo/docs/), [`src/`](bun-docs-repo/src/) | **Official Bun Source Repository** - Complete documentation, API docs, benchmarks, build scripts, and Zig source code |
 
 ### 🧪 Test Projects & Examples
-| Directory | Description |
-|-----------|-------------|
-| [`test-project/`](test-project/README.md) | **Complete Bun Server Implementation** - 6 different server configurations ([bun-server-config.ts](test-project/bun-server-config.ts)), comprehensive fetch API reference ([FETCH_FEATURES.md](test-project/FETCH_FEATURES.md)), performance testing ([server.test.ts](test-project/server.test.ts)) |
-| [`comprehensive-api-test/`](comprehensive-api-test/README.md) | **API Testing Suite** - RESTful endpoints, routing, JSON responses, testing setup |
-| [`enhanced-api-test/`](enhanced-api-test/README.md) | **Advanced API Features** - File uploads, WebSocket support, authentication, database integration |
-| [`full-api-project/`](full-api-project/README.md) | **Production-Ready API** - Full-featured implementation with monitoring and error handling |
-| [`final-test-project/`](final-test-project/README.md) | **Consolidated Testing** - Final implementation combining all learned concepts |
+| Directory | Status | Difficulty | Time | Key Features | Description |
+|-----------|--------|------------|------|--------------|-------------|
+| [`test-project/`](test-project/README.md) | ✅ **Complete** | 🟡 Intermediate | 2-3h | Server configs, fetch API, testing | **Complete Bun Server Implementation** - 6 different server configurations, comprehensive fetch API reference, performance testing |
+| [`comprehensive-api-test/`](comprehensive-api-test/README.md) | ✅ **Complete** | 🟢 Beginner | 1-2h | REST API, routing, JSON | **API Testing Suite** - RESTful endpoints, routing, JSON responses, comprehensive testing setup |
+| [`enhanced-api-test/`](enhanced-api-test/README.md) | ✅ **Complete** | 🟠 Advanced | 2-4h | File uploads, WebSockets, auth | **Advanced API Features** - File uploads, WebSocket support, JWT authentication, SQLite database integration |
+| [`full-api-project/`](full-api-project/README.md) | ✅ **Complete** | 🔴 Expert | 3-5h | Monitoring, error handling, scaling | **Production-Ready API** - Full-featured implementation with health monitoring, structured error handling, and enterprise patterns |
+| [`final-test-project/`](final-test-project/README.md) | ✅ **Complete** | 🟠 Advanced | 2-3h | Consolidation, best practices | **Consolidated Testing** - Final implementation combining all learned concepts with production best practices |
 
 ### 🛠️ Utilities & Tools
-| Directory | Description |
-|-----------|-------------|
-| [`enhanced-project/`](enhanced-project/README.md) | **Enhanced Development Setup** - Advanced project configuration and tooling ([package.json](enhanced-project/package.json)) |
-| [`test-port-project/`](test-port-project/README.md) | **Port Management Tools** - Utilities for testing and managing server ports ([package.json](test-port-project/package.json)) |
-| [`your-project-name/`](your-project-name/README.md) | **Starter Template** - Basic Bun project template for new applications ([package.json](your-project-name/package.json)) |
+| Directory | Status | Purpose | Package | Description |
+|-----------|--------|---------|---------|-------------|
+| [`enhanced-project/`](enhanced-project/README.md) | ✅ **Ready** | Development | [`package.json`](enhanced-project/package.json) | **Enhanced Development Setup** - Advanced project configuration, tooling, and development optimizations |
+| [`test-port-project/`](test-port-project/README.md) | ✅ **Ready** | Testing | [`package.json`](test-port-project/package.json) | **Port Management Tools** - Utilities for testing server ports, port availability checking, and network utilities |
+| [`your-project-name/`](your-project-name/README.md) | ✅ **Ready** | Template | [`package.json`](your-project-name/package.json) | **Starter Template** - Clean Bun project template with TypeScript, testing setup, and basic configuration |
 
 ## Quick Start
 
@@ -156,24 +179,37 @@ Bun is a modern JavaScript runtime that offers significant advantages over tradi
 
 ### 📄 Key Files to Explore
 
-| File | Description |
-|------|-------------|
-| [`package.json`](package.json) | Root package configuration and scripts |
-| [`bun-docs-repo/docs/quickstart.mdx`](bun-docs-repo/docs/quickstart.mdx) | Official Bun quickstart guide |
-| [`bun-docs-repo/docs/runtime/http.mdx`](bun-docs-repo/docs/runtime/http.mdx) | Bun.serve() API documentation |
-| [`bun-docs-repo/docs/runtime/networking/fetch.mdx`](bun-docs-repo/docs/runtime/networking/fetch.mdx) | Official fetch API docs |
-| [`test-project/bun-server-config.ts`](test-project/bun-server-config.ts) | 6 production server configurations |
-| [`test-project/FETCH_FEATURES.md`](test-project/FETCH_FEATURES.md) | Complete fetch API reference |
-| [`enhanced-api-test/index.ts`](enhanced-api-test/index.ts) | WebSocket + file upload server |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidelines |
+| File | Category | Difficulty | Description |
+|------|----------|------------|-------------|
+| [`package.json`](package.json) | 📦 Config | 🟢 Basic | Root package configuration, workspace setup, and global scripts |
+| [`bun-docs-repo/docs/quickstart.mdx`](bun-docs-repo/docs/quickstart.mdx) | 📚 Official | 🟢 Beginner | Official Bun quickstart guide with step-by-step setup |
+| [`bun-docs-repo/docs/runtime/http.mdx`](bun-docs-repo/docs/runtime/http.mdx) | 📚 Official | 🟡 Intermediate | Bun.serve() API documentation and server patterns |
+| [`bun-docs-repo/docs/runtime/networking/fetch.mdx`](bun-docs-repo/docs/runtime/networking/fetch.mdx) | 📚 Official | 🟡 Intermediate | Official fetch API documentation and advanced networking |
+| [`test-project/bun-server-config.ts`](test-project/bun-server-config.ts) | 🚀 Examples | 🟠 Advanced | 6 production-ready server configurations with different patterns |
+| [`test-project/FETCH_FEATURES.md`](test-project/FETCH_FEATURES.md) | 🔧 Reference | 🟠 Advanced | Complete Bun fetch API reference with 40+ features and examples |
+| [`enhanced-api-test/index.ts`](enhanced-api-test/index.ts) | 🚀 Examples | 🔴 Expert | WebSocket server with file uploads, authentication, and database integration |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | 📋 Docs | 🟢 Basic | Contribution guidelines and community participation info |
+
+### 📊 Project Overview
+
+| Project | Complexity | Time | Key Learnings | Best For |
+|---------|------------|------|---------------|----------|
+| `your-project-name/` | 🟢 Beginner | 30min | Basic setup, TypeScript, project structure | First Bun project |
+| `comprehensive-api-test/` | 🟢 Beginner | 1-2h | REST APIs, routing, JSON handling | API fundamentals |
+| `test-project/` | 🟡 Intermediate | 2-3h | Server configs, fetch API, performance testing | Complete Bun features |
+| `enhanced-api-test/` | 🟠 Advanced | 2-4h | WebSockets, file uploads, authentication, SQLite | Full-stack Bun apps |
+| `full-api-project/` | 🔴 Expert | 3-5h | Production patterns, monitoring, error handling | Enterprise applications |
+| `bun-docs-repo/` | 📚 Reference | Variable | Official documentation, source code analysis | Deep Bun understanding |
 
 ### 🔗 Internal References
 
-- **[Official Bun Source](bun-docs-repo/)** - Complete source code and documentation
-- **[Server Configurations](test-project/bun-server-config.ts)** - Production-ready server examples
-- **[API Reference](test-project/FETCH_FEATURES.md)** - Comprehensive Bun fetch guide
-- **[Environment Variables](test-project/ENVIRONMENT_VARIABLES_REFERENCE.md)** - Bun environment config guide
-- **[Server Config Guide](test-project/BUN_SERVER_CONFIGURATION.md)** - Detailed server setup guide
+| Resource | Type | Purpose | Key Topics |
+|----------|------|---------|------------|
+| **[Official Bun Source](bun-docs-repo/)** | 📚 Documentation | Complete Bun ecosystem | Source code, docs, benchmarks, Zig implementation |
+| **[Server Configurations](test-project/bun-server-config.ts)** | 🚀 Examples | Production server patterns | 6 different server setups, middleware, security |
+| **[API Reference](test-project/FETCH_FEATURES.md)** | 🔧 Reference | Complete fetch API guide | 40+ fetch features, cross-references, examples |
+| **[Environment Variables](test-project/ENVIRONMENT_VARIABLES_REFERENCE.md)** | ⚙️ Config | Bun environment setup | Environment variables, configuration patterns |
+| **[Server Config Guide](test-project/BUN_SERVER_CONFIGURATION.md)** | 📖 Guide | Server setup reference | Bun.serve() options, best practices, troubleshooting |
 
 ## Contributing
 
