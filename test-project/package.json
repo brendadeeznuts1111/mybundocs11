@@ -1,14 +1,40 @@
 {
   "name": "bun-enhanced-api-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Production-ready Bun API server with comprehensive debugging, metrics tracking, and performance benchmarking",
   "main": "index.ts",
   "type": "module",
+  "bin": {
+    "bun-fetch-demo": "./bun-fetch-demo/bin/cli.ts"
+  },
   "scripts": {
     "dev": "bun run index.ts",
     "start": "bun run index.ts",
     "test": "bun test",
-    "bench": "curl -s http://localhost:3000/bench | jq ."
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "bench": "curl -s http://localhost:3000/bench | jq .",
+    "lint": "bun run --bun eslint . --ext .ts,.tsx",
+    "lint:fix": "bun run --bun eslint . --ext .ts,.tsx --fix",
+    "format": "bun run --bun prettier --write .",
+    "format:check": "bun run --bun prettier --check .",
+    "typecheck": "bun run --bun tsc --noEmit",
+    "build": "bun build index.ts --outdir dist --target bun",
+    "build:cli": "bun build bun-fetch-demo/bin/cli.ts --outdir dist --target bun",
+    "clean": "rm -rf dist node_modules/.cache",
+    "cli": "bun run bun-fetch-demo/bin/cli.ts",
+    "cli:all": "bun run bun-fetch-demo/bin/cli.ts all",
+    "cli:docs": "bun run bun-fetch-demo/bin/cli.ts docs",
+    "cli:quickstart": "bun run bun-fetch-demo/bin/cli.ts quickstart",
+    "cli:best": "bun run bun-fetch-demo/bin/cli.ts bestpractices",
+    "quality": "bun run typecheck && bun run lint && bun run format:check && bun run test",
+    "quality:fix": "bun run typecheck && bun run lint:fix && bun run format",
+    "quality:check": "./check-quality.sh",
+    "install:clean": "rm -rf node_modules package-lock.json yarn.lock && bun install",
+    "deps:check": "bun outdated",
+    "deps:update": "bun update",
+    "deps:audit": "bun audit",
+    "ci": "bun run install:clean && bun run quality"
   },
   "keywords": [
     "bun",
@@ -17,14 +43,56 @@
     "typescript",
     "metrics",
     "benchmark",
-    "debugging"
+    "debugging",
+    "cli",
+    "fetch",
+    "http"
   ],
   "author": "Bun Developer",
   "license": "MIT",
+  "engines": {
+    "bun": ">=1.0.0"
+  },
   "dependencies": {
     "bun-types": "latest"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "prettier"],
+    "rules": {
+      "prettier/prettier": "error",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/explicit-function-return-type": "off"
+    },
+    "env": {
+      "es2022": true,
+      "node": true,
+      "bun": true
+    },
+    "ignorePatterns": ["dist/", "node_modules/", "*.js"]
   }
 }
