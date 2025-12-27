@@ -1415,9 +1415,57 @@ BUN_CONFIG_MAX_HTTP_REQUESTS=512 bun ./my-script.ts
 
 ---
 
-## See Also
+## 📚 Additional Resources
 
-- [Bun Fetch Documentation](https://bun.com/docs/runtime/networking/fetch)
-- [WHATWG Fetch Standard](https://fetch.spec.whatwg.org/)
-- [MDN Fetch API Guide](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-- [Bun DNS Documentation](https://bun.com/docs/api/dns)
+### Official Documentation
+- **[Bun Fetch API](https://bun.com/docs/runtime/networking/fetch)** - Official Bun fetch documentation
+- **[Bun DNS API](https://bun.com/docs/api/dns)** - DNS prefetching and caching
+- **[Bun File I/O](https://bun.com/docs/api/file-io)** - Bun.write() and file operations
+
+### Web Standards
+- **[WHATWG Fetch](https://fetch.spec.whatwg.org/)** - Official Fetch API specification
+- **[MDN Fetch Guide](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)** - Comprehensive usage guide
+
+### Related Bun Features
+- **[Bun.serve()](https://bun.com/docs/api/http)** - HTTP server with automatic fetch integration
+- **[WebSockets](https://bun.com/docs/api/websockets)** - Real-time communication
+- **[SQLite](https://bun.com/docs/api/sqlite)** - Built-in database support
+
+---
+
+## 🎯 Quick Reference Summary
+
+### Essential Patterns
+```typescript
+// Fast binary data handling
+const bytes = await fetch(url).then(r => r.bytes());
+
+// Connection reuse (automatic)
+await fetch("https://api.com", { keepalive: true });
+
+// Preconnect for performance
+Bun.fetch.preconnect("https://api.com");
+
+// Efficient file downloads
+await Bun.write("file.dat", await fetch(url));
+```
+
+### Key Performance Tips
+- Use `Response.bytes()` for fastest binary data access
+- Enable connection reuse with `keepalive: true`
+- Preconnect to domains for reduced latency
+- Leverage `Bun.write()` for zero-copy file operations
+- Set appropriate timeouts with `AbortSignal.timeout()`
+
+### Environment Configuration
+```bash
+# Increase connection limits
+BUN_CONFIG_MAX_HTTP_REQUESTS=512 bun app.ts
+
+# Enable verbose fetch logging
+BUN_CONFIG_VERBOSE_FETCH=curl bun app.ts
+```
+
+---
+
+**Built with ❤️ for the Bun community** | **Comprehensive Fetch API Reference**
