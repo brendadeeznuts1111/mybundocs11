@@ -1330,9 +1330,10 @@ BUN_CONFIG_MAX_HTTP_REQUESTS=512 bun ./my-script.ts
 ## Documentation Sources
 
 ### Official Bun Documentation
-- **Primary**: https://bun.com/docs/runtime/networking/fetch
-- **DNS API**: https://bun.com/docs/api/dns
-- **File I/O**: https://bun.com/docs/api/file-io
+
+- **Primary**: [bun.sh/docs/api/fetch](https://bun.sh/docs/api/fetch)
+- **DNS API**: [bun.sh/docs/api/dns](https://bun.sh/docs/api/dns)
+- **File I/O**: [bun.sh/docs/api/file-io](https://bun.sh/docs/api/file-io)
 
 ### Local Documentation Files
 - **Fetch Reference**: `./FETCH_FEATURES.md` (this file)

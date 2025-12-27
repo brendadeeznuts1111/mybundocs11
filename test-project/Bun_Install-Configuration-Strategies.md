@@ -5,13 +5,13 @@
 ## Complete Installation Strategy Reference
 
 ### Table of Contents
+
 - [Installation Strategies](#installation-strategies)
 - [Minimum Release Age Security](#minimum-release-age-security)
 - [Configuration Methods](#configuration-methods)
 - [Advanced Cache Management](#advanced-cache-management)
-- [Enterprise Security](#enterprise-security)
-- [Troubleshooting](#troubleshooting)
-- [Performance Optimization](#performance-optimization)
+- [Enterprise Security Configuration](#enterprise-security-configuration)
+- [Additional Resources](#additional-resources)
 
 ## Installation Strategies
 

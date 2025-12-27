@@ -421,4 +421,4 @@ Bun.serve({
 
 ---
 
-*Based on Bun official documentation: https://bun.com/docs/runtime/http/server#configuration*
+*Based on Bun official documentation: [bun.sh/docs/runtime/http/server](https://bun.sh/docs/runtime/http/server#configuration)*
