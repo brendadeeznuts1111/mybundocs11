@@ -1,6 +1,8 @@
 // ====================================================================
 // Bun Fetch API - Complete Performance & Features Demo
 // Based on: https://bun.com/docs/runtime/networking/fetch#performance
+// ESLint disabled for demo code with intentionally unused variables
+// eslint-disable @typescript-eslint/no-unused-vars
 // ====================================================================
 
 // Demo: Fetch from LOCAL server (port 3000)
