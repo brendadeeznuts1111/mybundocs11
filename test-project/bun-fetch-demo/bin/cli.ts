@@ -1132,7 +1132,7 @@ async function main() {
     printMainMenu();
     await interactiveMode();
   } else {
-    const command = args[0];
+    const command = args[0] || "";
 
     if (command === "all") {
       await runAllFeatures();

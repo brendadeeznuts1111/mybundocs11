@@ -113,16 +113,20 @@ console.log("\n=== SECTION 3: Streaming Response Bodies ===");
 const streamResponse = await fetch("http://example.com");
 console.log("Streaming response body chunks:");
 let chunkCount = 0;
-for await (const chunk of streamResponse.body!) {
+// Use reader approach instead of for-await for better compatibility
+const reader = streamResponse.body!.getReader();
+while (true) {
+  const { done, value } = await reader.read();
+  if (done) break;
   chunkCount++;
-  // console.log(`  Chunk ${chunkCount}:`, chunk.length, "bytes");
+  totalBytes += value.length;
 }
 console.log(`  Total chunks received: ${chunkCount}`);
 
 // Direct stream access
 const stream2 = streamResponse.body;
 const reader = stream2!.getReader();
-const { value, done } = await reader.read();
+const { value, done: _done } = await reader.read(); // _done indicates intentionally unused
 console.log("Direct ReadableStream access - First chunk:", value?.length, "bytes");
 
 // ====================================================================
@@ -172,13 +176,13 @@ console.log("\n=== SECTION 6: Connection Pooling & Keep-Alive ===");
 // You can disable keep-alive per-request:
 const keepAliveDisabled = await fetch("http://example.com", {
   keepalive: false, // Disable connection reuse for this request
-});
+}); // Variable intentionally unused for demo
 console.log("Keep-alive disabled request completed");
 
 // Or use "Connection: close" header to disable keep-alive
 const connectionClose = await fetch("http://example.com", {
   headers: { "Connection": "close" },
-});
+}); // Variable intentionally unused for demo
 console.log("Connection: close header request completed");
 
 // ====================================================================
@@ -217,7 +221,7 @@ setTimeout(() => controller.abort(), 100);
 try {
   const cancelResponse = await fetch("http://example.com", {
     signal: controller.signal,
-  });
+  }); // Variable intentionally unused for demo
   console.log("Request completed before cancellation");
 } catch (e) {
   if ((e as Error).name === "AbortError") {
@@ -308,7 +312,7 @@ console.log("\n=== SECTION 11: Proxy Support ===");
 try {
   const proxyResponse = await fetch("http://example.com", {
     proxy: "http://proxy.example.com:8080",
-  });
+  } as any); // Bun-specific extension
   console.log("Proxy request:", proxyResponse.status);
 } catch (e) {
   console.log("Proxy request: Failed (no proxy server running - expected)");
@@ -324,7 +328,7 @@ try {
         "X-Custom-Proxy-Header": "value",
       },
     },
-  });
+  } as any); // Bun-specific extension
   console.log("Proxy with headers:", proxyWithHeaders.status);
 } catch (e) {
   console.log("Proxy with headers: Failed (no proxy server running - expected)");
@@ -459,20 +463,20 @@ console.log("\n=== SECTION 17: Request Options ===");
 // Disable automatic decompression
 const noDecompressResponse = await fetch("http://example.com", {
   decompress: false, // Get raw compressed response
-});
+} as any); // Variable intentionally unused for demo
 console.log("Request with decompress:false completed");
 
 // Debug logging
 console.log("\n=== Debug Logging Demo ===");
 const verboseResponse = await fetch("http://example.com", {
   verbose: true, // Print request/response headers
-});
+} as any); // Bun-specific extension
 console.log("Verbose fetch completed:", verboseResponse.status);
 
 // Even more detailed logging
 const curlVerboseResponse = await fetch("http://example.com", {
   verbose: "curl", // More detailed cURL-style output
-});
+} as any); // Bun-specific extension
 console.log("cURL verbose fetch completed:", curlVerboseResponse.status);
 
 console.log("\n=== All Fetch API Features Demo Complete ===");

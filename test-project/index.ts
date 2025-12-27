@@ -552,7 +552,7 @@ class ApiServer {
       fetch: (req) => this.fetchHandler(req),
     });
 
-    console.log(`Server started successfully`);
+    console.log(`Server started successfully on ${server.url}`);
     console.log(`http://example.com:${this.config.port}`);
     console.log(`http://localhost:${this.config.port}`);
     console.log(`Available endpoints:`);

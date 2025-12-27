@@ -125,7 +125,7 @@ class BunServerConfigurator {
    */
   static basicConfig(): BunServerConfig {
     return {
-      fetch: (req: Request) => {
+      fetch: (_req: Request) => {
         return new Response("Hello, Bun! Basic server configuration", {
           status: 200,
           headers: { "Content-Type": "text/plain" }
@@ -238,7 +238,7 @@ class BunServerConfigurator {
       },
 
       // Fallback for unmatched routes (important for Bun < 1.2.3)
-      fetch: (req: Request) => {
+      fetch: (_req: Request) => {
         return new Response("Not Found", { status: 404 });
       },
 
@@ -447,7 +447,7 @@ BAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBX
         }
       },
 
-      fetch: (req: Request) => {
+      fetch: (_req: Request) => {
         const url = new URL(req.url);
         const path = url.pathname;
 
@@ -613,11 +613,12 @@ class BunServerDemo {
       process.stdin.setEncoding('utf8');
 
       process.stdin.on('data', async (key) => {
-        if (key === '\u0003') { // Ctrl+C
+        const keyStr = key.toString();
+        if (keyStr === '\u0003') { // Ctrl+C
           await this.gracefulShutdown();
-        } else if (key === 'r') {
+        } else if (keyStr === 'r') {
           this.reloadRoutes();
-        } else if (key === 's') {
+        } else if (keyStr === 's') {
           this.showStatus();
         }
       });
