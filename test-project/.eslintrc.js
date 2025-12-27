@@ -48,5 +48,11 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off',
       },
     },
+    {
+      files: ['demo-fetch.ts'],
+      rules: {
+        '@typescript-eslint/no-unused-vars': 'off', // Demo file with intentionally unused variables
+      },
+    },
   ],
 };
