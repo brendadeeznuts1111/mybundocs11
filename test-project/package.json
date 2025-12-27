@@ -1,0 +1,30 @@
+{
+  "name": "bun-enhanced-api-server",
+  "version": "1.0.0",
+  "description": "Production-ready Bun API server with comprehensive debugging, metrics tracking, and performance benchmarking",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts",
+    "start": "bun run index.ts",
+    "test": "bun test",
+    "bench": "curl -s http://localhost:3000/bench | jq ."
+  },
+  "keywords": [
+    "bun",
+    "api",
+    "rest",
+    "typescript",
+    "metrics",
+    "benchmark",
+    "debugging"
+  ],
+  "author": "Bun Developer",
+  "license": "MIT",
+  "dependencies": {
+    "bun-types": "latest"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

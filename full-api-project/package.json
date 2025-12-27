@@ -1,0 +1,14 @@
+{
+  "name": "full-api-project",
+  "version": "1.0.0",
+  "description": "A simple Bun project template with API endpoints and testing",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

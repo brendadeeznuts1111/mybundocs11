@@ -1,0 +1,12 @@
+{
+  "name": "test-port-project",
+  "version": "1.0.0",
+  "description": "A simple Bun project template",
+  "main": "index.ts",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
