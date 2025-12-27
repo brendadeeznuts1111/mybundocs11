@@ -211,7 +211,7 @@ class BunServerConfigurator {
           }
         },
 
-        "/api/data": (req) => {
+        "/api/data": (_req) => {
           const data = {
             server: "Bun",
             version: Bun.version,
@@ -447,7 +447,7 @@ BAYTAkFVMRMwEQYDVQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBX
         }
       },
 
-      fetch: (_req: Request) => {
+      fetch: (req: Request) => {
         const url = new URL(req.url);
         const path = url.pathname;
 

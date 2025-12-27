@@ -113,6 +113,7 @@ console.log("\n=== SECTION 3: Streaming Response Bodies ===");
 const streamResponse = await fetch("http://example.com");
 console.log("Streaming response body chunks:");
 let chunkCount = 0;
+let totalBytes = 0; // Declare totalBytes
 // Use reader approach instead of for-await for better compatibility
 const reader = streamResponse.body!.getReader();
 while (true) {
@@ -121,11 +122,11 @@ while (true) {
   chunkCount++;
   totalBytes += value.length;
 }
-console.log(`  Total chunks received: ${chunkCount}`);
+console.log(`  Total chunks received: ${chunkCount}, Total bytes: ${totalBytes}`);
 
 // Direct stream access
 const stream2 = streamResponse.body;
-const reader = stream2!.getReader();
+const reader2 = stream2!.getReader(); // Rename to reader2 to avoid redeclaration
 const { value, done: _done } = await reader.read(); // _done indicates intentionally unused
 console.log("Direct ReadableStream access - First chunk:", value?.length, "bytes");
 
@@ -176,13 +177,13 @@ console.log("\n=== SECTION 6: Connection Pooling & Keep-Alive ===");
 // You can disable keep-alive per-request:
 const keepAliveDisabled = await fetch("http://example.com", {
   keepalive: false, // Disable connection reuse for this request
-}); // Variable intentionally unused for demo
+}); // Variable intentionally unused for demo - focus is on option usage
 console.log("Keep-alive disabled request completed");
 
 // Or use "Connection: close" header to disable keep-alive
 const connectionClose = await fetch("http://example.com", {
   headers: { "Connection": "close" },
-}); // Variable intentionally unused for demo
+}); // Variable intentionally unused for demo - focus is on header usage
 console.log("Connection: close header request completed");
 
 // ====================================================================
@@ -221,7 +222,7 @@ setTimeout(() => controller.abort(), 100);
 try {
   const cancelResponse = await fetch("http://example.com", {
     signal: controller.signal,
-  }); // Variable intentionally unused for demo
+  }); // Variable intentionally unused for demo - testing cancellation
   console.log("Request completed before cancellation");
 } catch (e) {
   if ((e as Error).name === "AbortError") {
@@ -463,7 +464,7 @@ console.log("\n=== SECTION 17: Request Options ===");
 // Disable automatic decompression
 const noDecompressResponse = await fetch("http://example.com", {
   decompress: false, // Get raw compressed response
-} as any); // Variable intentionally unused for demo
+} as any); // Variable intentionally unused for demo - testing decompress option
 console.log("Request with decompress:false completed");
 
 // Debug logging
