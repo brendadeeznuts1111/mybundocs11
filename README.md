@@ -13,17 +13,19 @@ A comprehensive collection of Bun-related documentation, test projects, and exam
 
 ## Repository Contents
 
-This repository includes various Bun (JavaScript runtime) related materials:
+This repository includes various Bun (JavaScript runtime) related materials organized in the following directories:
 
-- **[bun-docs-repo/](bun-docs-repo/README.md)**: The main Bun documentation and source repository, including guides, API docs, benchmarks, and build scripts.
-- **[comprehensive-api-test/](comprehensive-api-test/README.md)**: A comprehensive API testing project demonstrating Bun's server capabilities.
-- **[enhanced-api-test/](enhanced-api-test/README.md)**: Enhanced API testing with file upload functionality.
-- **[test-project/](test-project/README.md)**: Collection of test projects showcasing different Bun features like HTTP servers, fetch API, and bundling.
-- **[your-project/](your-project/README.md)**: A basic Bun project template.
-- **[final-test-project/](final-test-project/README.md)**: Final test implementation.
-- **[full-api-project/](full-api-project/README.md)**: Full-featured API project.
-- **[test-port-project/](test-port-project/README.md)**: Port testing utilities.
-- **[enhanced-project/](enhanced-project/README.md)**: Enhanced project setup.
+| Directory | Description |
+|-----------|-------------|
+| [bun-docs-repo/](bun-docs-repo/README.md) | The main Bun documentation and source repository, including guides, API docs, benchmarks, and build scripts. |
+| [comprehensive-api-test/](comprehensive-api-test/README.md) | A comprehensive API testing project demonstrating Bun's server capabilities. |
+| [enhanced-api-test/](enhanced-api-test/README.md) | Enhanced API testing with file upload functionality. |
+| [test-project/](test-project/README.md) | Collection of test projects showcasing different Bun features like HTTP servers, fetch API, and bundling. |
+| [your-project/](your-project/README.md) | A basic Bun project template. |
+| [final-test-project/](final-test-project/README.md) | Final test implementation. |
+| [full-api-project/](full-api-project/README.md) | Full-featured API project. |
+| [test-port-project/](test-port-project/README.md) | Port testing utilities. |
+| [enhanced-project/](enhanced-project/README.md) | Enhanced project setup. |
 
 ## Getting Started
 
